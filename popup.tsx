@@ -1,6 +1,8 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 
+import "./styles.css"
+
 const apiKey = process.env.REACT_APP_API_KEY
 
 function IndexPopup() {
@@ -24,7 +26,11 @@ function IndexPopup() {
   const handleClick = () => {
     setText(`Your country is ${country} and city is ${city}`)
   }
-  return <button onClick={handleClick}>{text}</button>
+  return (
+    <button className="bg-sky-500 w-96 h-96 text-white" onClick={handleClick}>
+      {text}
+    </button>
+  )
 }
 
 export default IndexPopup
