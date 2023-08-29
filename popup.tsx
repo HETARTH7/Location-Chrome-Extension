@@ -2,7 +2,6 @@ import axios from "axios"
 import { useReducer, useState } from "react"
 
 function IndexPopup() {
-  const [count, increase] = useReducer((c) => c + 1, 0)
   const [ipAddress, setIpAddress] = useState("")
 
   const handleClick = async (e) => {
@@ -14,8 +13,7 @@ function IndexPopup() {
       console.log(err)
     }
   }
-
-  return <button onClick={handleClick}>Get {ipAddress}</button>
+  return <button onClick={handleClick}>{ipAddress}</button>
 }
 
 export default IndexPopup
